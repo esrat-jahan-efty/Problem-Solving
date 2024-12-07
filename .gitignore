@@ -1,0 +1,9 @@
+# Ignore all files without an extension
+*
+
+# Exclude files with common source extensions (so they are still tracked)
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.gitignore
