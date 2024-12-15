@@ -50,5 +50,5 @@ int main()
     }
     count=count_row+count_col;
     printf("%d\n",count);
-    
+
 }
