@@ -2,7 +2,7 @@
 int main()
 {
     int n;
-    double total_bill=0;
+    double total_bill=0.00;
     scanf("%d",&n);
     while(n--)
     {
@@ -22,7 +22,7 @@ int main()
         {
             result=((pq)+(pq*0.05)+(pq*0.075));
         }
-        else
+        else if(item_type=='A')
         {
             result=((pq)+(pq*0.05));
         }
