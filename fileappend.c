@@ -4,8 +4,6 @@ int main()
 {
     FILE *file;
     char arr[101];
-    int length=strlen(arr);
-    int i;
     file=fopen("test.txt","a");
     if(file==NULL)
     {
@@ -15,9 +13,9 @@ int main()
     {
         printf("File is opened\n");
         gets(arr);
-        
-        fputs(arr,file);
         fputs("\n",file);
+        fputs(arr,file);
+        
         fclose(file);
     }
     return 0;

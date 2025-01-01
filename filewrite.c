@@ -4,8 +4,8 @@
 int main()
 {
     FILE *file;
-    char arr[101]="Esrat Jahan Efty";
-    int length=strlen(arr);
+    char str[101]="Esrat Iftekhar";
+    int length=strlen(str);
     int i;
     file=fopen("test.txt","w");
     if(file==NULL)
@@ -15,9 +15,9 @@ int main()
     else 
     {
         printf("File is opened\n");
-        for(i=0;i<length;i++)
+        for(i=0;str[i]!='\0';i++)
         {
-            fputc(arr[i],file);
+            fputc(str[i],file);
         }
         fclose(file);
     }
