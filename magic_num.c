@@ -1,40 +1,35 @@
 #include<stdio.h>
 int main()
 {
-    long long int num,rem,count=0,count_2=0;
+    long long int num,rem;
     scanf("%lld",&num);
 
     if(num<0)
     {
-        num=num*(-1);//number -ve hole +ve korbo 
+        num=num*(-1);
     }
 
-    long long int num_2=num;
+    int flag=0;
+
     while(num!=0)
     {
         rem=num%10;
-        num=num/10;
-        count++;//number er total digit count korbo 
-    }
-
-    while(num_2!=0)
-    {
-        rem=num_2%10;
-        num_2=num_2/10;
-        if((rem==3) || (rem==9))
+        if(rem!=3 && rem!=9)
         {
-            count_2++;
+            flag=1;
+            break;
         }
-        
+
+        num=num/10;
     }
 
-    if(count==count_2)//true hole magic number 
+    if(flag==1)
     {
-        printf("Yes\n");
+        printf("No\n");
     }
     else{
-        printf("No\n");//false hole magic number na as it only consists of either 3 or 9 or both
+        printf("Yes\n");
     }
     return 0;
 
-}//wrong on test 19
+}
