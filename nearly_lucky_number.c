@@ -1,29 +1,33 @@
 #include<stdio.h>
 int main()
 {
-    long long int num,rem,count=0,count_2=0;
+    long long int num,rem,flag=0;
     scanf("%lld",&num);
 
-    long long int num_2=num;
+    if(num==7)
+    {
+        flag=1;
+    }
+    else if(num==4)
+    {
+        flag=1;
+    }
+    else
+    {
     while(num!=0)
     {
         rem=num%10;
-        num=num/10;
-        count++;
-    }
-
-    while(num_2!=0)
-    {
-        rem=num_2%10;
-        num_2=num_2/10;
-        if((rem==4) || (rem==7))
-        {
-            count_2++;
-        }
         
+        if((rem!=4) && (rem!=7))
+        {
+            flag=1;
+            break;
+        }
+        num=num/10;
+    }
     }
 
-    if(count==count_2)
+    if(flag==0)
     {
         printf("YES\n");
     }

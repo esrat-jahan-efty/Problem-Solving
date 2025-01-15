@@ -5,8 +5,8 @@ int main()
     int n;
     scanf("%d",&n);
 
-     char first[3],sec[3];
-        scanf("%s",first);
+    int first,sec;
+        scanf("%d",&first);
         getchar();
 
     int i;
@@ -14,15 +14,12 @@ int main()
     
     for(i=1;i<n;i++)
     {
-        scanf("%s",sec);
-        getchar();
-
-        int j=0;
-        if(sec[j]!=first[j])
+        scanf("%d",&sec);
+        if(sec!=first)
         {
             count++;
         }
-        strcpy(first,sec);
+        first=sec;
 
     }
     printf("%d",count);
