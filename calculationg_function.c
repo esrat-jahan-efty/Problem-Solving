@@ -1,20 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    long long int n,p=0,q=0,i;
+    long long int n,en,on,ten,ton,se,so,ans;
     scanf("%lld",&n);
-
-    for(i=1;i<=n;i++)
+    if(n%2==0)
     {
-        if(i%2==0)
-        {
-            p=p+i;
-        }
-        else{
-            q=q+i;
-        }
+       en=n;
+       on=n-1;
     }
-    printf("%lld",p-q);
+    else{
+       en=n-1;
+       on=n;
+    }
+
+    ten=((en-2)/2)+1;
+    ton=((on-1)/2)+1;
+
+    se=(ten*(en+2))/2;
+    so=(ton*(on+1))/2;
+    
+    ans=se-so;
+
+    printf("%lld",ans);
+
 
     return 0;
 
