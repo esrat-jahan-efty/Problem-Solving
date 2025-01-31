@@ -6,9 +6,9 @@ int main()
     scanf("%s",str);
     getchar();
 
-    int len=strlen(str),i=0,flag=0;
+    int len=strlen(str),flag=0;
     
-    if(str[0] <= 'a' && str[0] >= 'z')
+    if(str[0] >= 'a' && str[0] <= 'z')
     {
         for(int i = 1; i < len ; i++)
         {
