@@ -6,6 +6,7 @@ int main()
     scanf("%d",&n);
     while(n--)
     {
+        getchar();
         char item_type;
         scanf(" %c",&item_type);
         int price,quantity;
