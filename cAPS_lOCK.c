@@ -6,48 +6,67 @@ int main()
     scanf("%s",str);
     getchar();
 
-    strcpy(cpystr,str);
-
     int len=strlen(str),i=0,flag=0;
-
-    while(i<len)
+    
+    if(str[0] <= 'a' && str[0] >= 'z')
     {
-        if(str[i]>=97 && str[i]<=122)
+        for(int i = 1; i < len ; i++)
         {
-            str[i]=str[i]-32;
-
-                
-            for(i=i+1;i<len;i++)
+            if(str[i] >='A' && str[i]<='Z')
             {
-                if(str[i]>=97 && str[i]<=122)
-                {
-                    flag=1;
-                    break;
-                }
-
-                else if(str[i]>=65 && str[i]<=90 && flag==0)
-                {
-                    str[i]=str[i]+32;
-                }
+                flag=1;
+            }
+            else
+            {
+                flag=0;
+                break;
             }
         }
-        else{
-            for(i=i+1;i<len && flag==0 ;i++)
+
+        if(flag == 1)
+        {
+            str[0] = str[0] - 32;
+
+            for(int i = 1; i < len ; i++)
             {
-                if(str[i]>=65 && str[i]<=90)
-                {
-                    str[i]=str[i]+32;
-                }
+                str[i] = str[i] + 32;
             }
-            
+
+            printf("%s\n",str);
         }
-    }
-    if(flag==1)
+        else
+        {
+            printf("%s\n",str);
+        }
+    }else
     {
-        printf("%s",cpystr);
-    }
-    else{
-    printf("%s",str);
+        for(int i = 0; i < len ; i++)
+        {
+            if(str[i] >='A' && str[i]<='Z')
+            {
+                flag=1;
+            }
+            else
+            {
+                flag=0;
+                break;
+            }
+        }
+
+        if(flag == 1)
+        {
+            for(int i = 1; i < len ; i++)
+            {
+                str[i] = str[i] + 32;
+            }
+
+            printf("%s\n",str);
+        }
+        else
+        {
+            printf("%s\n",str);
+        }
+
     }
 
     return 0;
