@@ -6,16 +6,32 @@ int main()
     scanf("%s",str);
     getchar();
 
-    int len=strlen(str),flag=0;
-    
-    if(str[0] >= 'a' && str[0] <= 'z')
+    int len=strlen(str),flag=0,i=0;
+
+    if(len==1)
     {
+        if(str[0]>='a' && str[0]<='z')
+        {
+            str[0]=str[0]-32;
+        }
+        else if(str[0]>='A' && str[0]<='Z')
+        {
+            str[0]=str[0]+32;
+        }
+        printf("%s",str);
+    }
+    else
+    {
+    
+      if(str[0] >= 'a' && str[0] <= 'z')
+      {
         for(int i = 1; i < len ; i++)
         {
             if(str[i] >='A' && str[i]<='Z')
             {
                 flag=1;
             }
+            
             else
             {
                 flag=0;
@@ -38,8 +54,9 @@ int main()
         {
             printf("%s\n",str);
         }
-    }else
-    {
+      }
+      else
+      {
         for(int i = 0; i < len ; i++)
         {
             if(str[i] >='A' && str[i]<='Z')
@@ -55,7 +72,7 @@ int main()
 
         if(flag == 1)
         {
-            for(int i = 1; i < len ; i++)
+            for(int i = 0; i < len ; i++)
             {
                 str[i] = str[i] + 32;
             }
@@ -67,6 +84,7 @@ int main()
             printf("%s\n",str);
         }
 
+      }
     }
 
     return 0;
