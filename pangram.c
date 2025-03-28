@@ -19,6 +19,7 @@ int main()
     }
 
     int j=0,count=0;
+    
     while(alp[j]!='\0')
     {
         int k=0;
