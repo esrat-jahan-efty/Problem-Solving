@@ -1,15 +1,27 @@
-//MEMORY LIMIT EXCEEDED ON TEST 8
-
-
 #include<stdio.h>
 int main()
 {
-
-    long long int n,pos_num;
+    long long int n,pos_num,ans;
     scanf("%lld%lld",&n,&pos_num);
+    long long int total_odds=(n+1)/2;
+
+    if(pos_num<=total_odds)
+    {
+        ans=2*pos_num-1;
+    }
+    else
+    { 
+        ans=2*(pos_num-total_odds);
+    }
+
+    printf("%lld\n",ans);
+
+//1000000000000 
+//500000000001
 
 
-    long long int array[n];
+     //MEMORY LIMIT EXCEEDED ON TEST 8
+    /*long long int array[n];
     long long int odd_val_pos=0,even_val_pos=((n+1)/2),i=1;
 
 
@@ -32,15 +44,14 @@ int main()
 
         i++;
 
-
     }
 
-    /*for(int j=0;j<n;j++)
+    for(int j=0;j<n;j++)
     {
         printf("%lld  ",array[j]);
-    }*/
+    }
 
-   printf("%lld\n",array[pos_num-1]);
+   printf("%lld\n",array[pos_num-1]);*/
 
    return 0;
 }
