@@ -35,8 +35,8 @@ int main()
         }
 
         
-        int isPrime=1;
-        for (long long int a=2;a*a<=y;a++) 
+        int isPrime=1;long long int a;
+        for (a=2;a*a<=y;a++) 
         {
             if (y%a==0) 
             {
@@ -45,7 +45,7 @@ int main()
             }
         }
 
-        if (isPrime)
+        if (isPrime==1)
             printf("YES\n");
         else
             printf("NO\n");
